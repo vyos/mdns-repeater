@@ -1,0 +1,2 @@
+# Uncomment to start mDNS-repeater on the listed interfaces
+#DAEMON_ARGS="eth0 eth1"

@@ -1,0 +1,15 @@
+[Unit]
+Description=mDNS-Repeater
+After=network.target
+RequiresMountsFor=/run
+
+[Service]
+Type=notify
+NotifyAccess=main
+EnvironmentFile=-/etc/default/mdns-repeater
+ExecStart=/usr/sbin/mdns-repeater $DAEMON_ARGS
+Restart=on-failure
+Type=forking
+
+[Install]
+WantedBy=multi-user.target

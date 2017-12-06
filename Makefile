@@ -52,4 +52,8 @@ clean:
 
 install:
 	install -d $(DESTDIR)/usr/sbin
+	install -d $(DESTDIR)/lib/systemd/system
+	install -d $(DESTDIR)/etc/default
 	install -m 0755 mdns-repeater $(DESTDIR)/usr/sbin
+	install -m 0644 mdns-repeater.service $(DESTDIR)/lib/systemd/system
+	install -m 0644 mdns-repeater.default $(DESTDIR)/etc/default/mdns-repeater
