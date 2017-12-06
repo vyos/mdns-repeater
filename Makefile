@@ -47,4 +47,9 @@ clean:
 	-$(RM) _version
 	-$(RM) mdns-repeater
 	-$(RM) mdns-repeater-*.zip
+	-$(RM) build-stamp
+	-$(RM) -rf debian/mdns-repeater
 
+install:
+	install -d $(DESTDIR)/usr/sbin
+	install -m 0755 mdns-repeater $(DESTDIR)/usr/sbin

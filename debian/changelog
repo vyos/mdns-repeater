@@ -1,0 +1,5 @@
+mdns-repeater (0.1+vyos2+current0) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Christian Poessinger <christian@poessinger.com>  Wed, 06 Dec 2017 17:30:08 +0100

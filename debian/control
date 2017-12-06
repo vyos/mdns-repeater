@@ -1,0 +1,27 @@
+Source: mdns-repeater
+Section: net
+Priority: optional
+Maintainer: Christian Poessinger <christian@poessinger.com>
+Build-Depends: debhelper (>= 5),
+               pkg-config,
+               dh-systemd (>= 1.5)
+Standards-Version: 3.9.6
+Vcs-Git: http://github.com/c-po/mdns-repeater
+Homepage: http://github.com/c-po/mdns-repeater
+
+Package: mdns-repeater
+Architecture: linux-any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Multicast DNS repeater
+ mdns-repeater is a Multicast DNS repeater for Linux. Multicast DNS
+ uses the 224.0.0.51 address, which is "administratively scoped" and does not
+ leave the subnet.
+ .
+ mdns-repeater provides a "keep it simple, stupid" solution to discovering mDNS
+ services across subnets, and is primarily intended for router distributions and
+ software firewalls.
+ .
+ Since the mDNS protocol sends the AA records in the packet itself, the repeater
+ does not need to forge the source address. Instead, the source address is of
+ the interface that repeats the packet.
+
