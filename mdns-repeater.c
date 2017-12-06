@@ -40,11 +40,11 @@
 #define PIDFILE "/var/run/" PACKAGE ".pid"
 
 struct if_sock {
-	const char *ifname;		/* interface name  */
-	int sockfd;				/* socket filedesc */
+	const char *ifname;	/* interface name  */
+	int sockfd;		/* socket filedesc */
 	struct in_addr addr;	/* interface addr  */
 	struct in_addr mask;	/* interface mask  */
-	struct in_addr net;		/* interface network (computed) */
+	struct in_addr net;	/* interface network (computed) */
 };
 
 int server_sockfd = -1;
@@ -295,7 +295,6 @@ static void show_help(const char *progname) {
 	fprintf(stderr, "\n"
 					"<ifdev> specifies an interface like \"eth0\"\n"
 					"packets received on an interface is repeated across all other specified interfaces\n"
-					"maximum number of interfaces is 5\n"
 					"\n"
 					" flags:\n"
 					"	-f	runs in foreground for debugging\n"
