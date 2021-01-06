@@ -2,9 +2,8 @@ Source: mdns-repeater
 Section: net
 Priority: optional
 Maintainer: Christian Poessinger <christian@poessinger.com>
-Build-Depends: debhelper (>= 5),
-               pkg-config,
-               dh-systemd (>= 1.5)
+Build-Depends: debhelper (>= 12),
+               pkg-config
 Standards-Version: 3.9.6
 Vcs-Git: http://github.com/c-po/mdns-repeater
 Homepage: http://github.com/c-po/mdns-repeater
